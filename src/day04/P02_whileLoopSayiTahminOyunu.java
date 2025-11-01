@@ -18,7 +18,7 @@ public class P02_whileLoopSayiTahminOyunu {
  */
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Aklımdan bir sayı tuttum. Hadi bil!");
+        System.out.println("Aklımdan 1-100 arasında olmak üzere bir sayı tuttum. Hadi bil!");
         Random rnd = new Random();
         int sayi = rnd.nextInt(1, 100);   //random class'ı girilen aralıkta olmak üzere rastgele bir sayı üretip variable'a atar.
         int tahminHakki = 5;
@@ -38,11 +38,11 @@ public class P02_whileLoopSayiTahminOyunu {
                 System.exit(0);
             }
             tahminSayisi++;
-            ilkTahminHakki--;
+            tahminHakki--;
             if (tahminHakki == 0) {
                 System.exit(0);
             } else if (tahminHakki>0) {
-                System.out.println(ilkTahminHakki + " adet tahmin hakkınız kaldı");
+                System.out.println(tahminHakki + " adet tahmin hakkınız kaldı");
             } else {
                 System.out.println("Üzgünüm"+ilkTahminHakki+" tahminizde de bilemediniz. Oyun Bitiriliyor");
             }
